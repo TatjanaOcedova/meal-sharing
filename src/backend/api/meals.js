@@ -74,10 +74,8 @@ router.get("/:id", async (request, response) => {
       const results = await knex("Meal").select("*").where("id", mealsId);
       if (results < 1) {
         response.status(200).json("There is no meal with the requested id!");
-        // response.send(results);
       } else {
         response.send(results);
-        // response.status(200).json("There is no meal with the requested id!");
       }
     } else {
       response.status(400).json("Please write valid id!");
