@@ -29,7 +29,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Link to deployed website: 
+Link to deployed website:
 
 This project will be built out over 3 different classes:
 
@@ -39,11 +39,9 @@ This project will be built out over 3 different classes:
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-
 ## Deployment <a name = "deployment"></a>
 
 Check here how to depoly an app on Heroku https://github.com/HackYourFuture-CPH/node.js/blob/main/deployment.md and watch this video https://www.youtube.com/watch?v=A9ZcSOc7hCw
-
 
 ### Environment variables
 

@@ -1,19 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import TestComponent from "./components/TestComponent/TestComponent";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+
+import NavBar from "./components/NavBar";
+import Home from "../pages/Home";
+import Meals from "../pages/Meals";
+import MealsDetail from "./components/MealsDetail";
+import AddMealFrom from "./Forms/AddMealForm";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
-      <Route exact path="/">
-        <p>test</p>
-      </Route>
-      <Route exact path="/lol">
-        <p>lol</p>
-      </Route>
-      <Route exact path="/test-component">
-        <TestComponent></TestComponent>
-      </Route>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/meals" component={Meals}></Route>
+        <Route exact path="/meals/:id" component={MealsDetail}></Route>
+        <Route exact path="/add" component={AddMealFrom}></Route>
+      </Switch>
+      <Footer />
     </Router>
   );
 }
