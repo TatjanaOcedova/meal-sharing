@@ -13,8 +13,9 @@ const MealsProvider = ({ children }) => {
     try {
       await fetch("/api/meals")
         .then((response) => {
+          console.log(response);
           if (!response.ok) {
-            throw Error("cannot fetch the data from API");
+            throw new Error("cannot fetch the data from API");
           } else {
             return response.json();
           }
