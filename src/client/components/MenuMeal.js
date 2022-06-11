@@ -10,7 +10,7 @@ function MenuMeal(props, { match }) {
     description,
     price,
     location,
-    when_date,
+    when,
     imgUrl,
     isAvailable,
     number_of_guests,
@@ -47,9 +47,7 @@ function MenuMeal(props, { match }) {
       <h6 className="meal-price">{price} dkk</h6>
       {/* <img src={imgUrl} /> */}
       <h6 className="meal-date">
-        {DateTime.fromISO(when_date).toLocaleString(
-          DateTime.DATE_MED_WITH_WEEKDAY
-        )}
+        {DateTime.fromISO(when).toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY)}
       </h6>
       <p> {location} </p>
       <p> {isAvailable} </p>
