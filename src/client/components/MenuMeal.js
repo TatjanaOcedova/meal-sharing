@@ -26,13 +26,13 @@ function MenuMeal(props, { match }) {
     const reservations = await fetchReservations.json();
     setReservations(reservations[0]);
 
-    console.log("reservationssss", reservations);
-    console.log(props.view);
+    // console.log("reservationssss", reservations);
+    // console.log(props.view);
 
     const reservation = reservations.filter(
       reservations.meal_id === match.params.id
     );
-    console.log("reservation", reservation);
+    // console.log("reservation", reservation);
   };
 
   return (
